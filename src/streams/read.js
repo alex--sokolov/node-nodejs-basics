@@ -1,7 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import {fileURLToPath} from 'url';
-import process from "process";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ERROR = 'Smth went wrong';
