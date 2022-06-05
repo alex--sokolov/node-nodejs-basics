@@ -6,7 +6,6 @@ import {fileURLToPath} from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ERROR = 'FS operation failed';
 
-
 export const copy = async (pathFrom, pathTo) => {
 
   // check if directory exists
