@@ -6,7 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ERROR = 'FS operation failed';
 const filesFolder = 'files';
 const fileWithWrongName = path.resolve(__dirname, filesFolder, 'wrongFilename.txt');
-const fileWithProperName = path.resolve(__dirname, filesFolder, 'wrongFilename.txt');
+const fileWithProperName = path.resolve(__dirname, filesFolder, 'properFilename.md');
 
 export const rename = async () => {
   await fs.access(fileWithProperName, fs.F_OK, async (err)  => {
