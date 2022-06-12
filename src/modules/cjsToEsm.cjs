@@ -1,6 +1,7 @@
 const path = require('path');
 const { release, version } = require('os');
-const { createServer: createServerHttp } = require('http');
+
+const createServerHttp = require('http').createServer;
 require('./files/c');
 
 const random = Math.random();
@@ -8,9 +9,9 @@ const random = Math.random();
 let unknownObject;
 
 if (random > 0.5) {
-    unknownObject = require('./files/a.json');
+  unknownObject = require('./files/a.json');
 } else {
-    unknownObject = require('./files/b.json');
+  unknownObject = require('./files/b.json');
 }
 
 console.log(`Release ${release()}`);
@@ -21,11 +22,10 @@ console.log(`Path to current file is ${__filename}`);
 console.log(`Path to current directory is ${__dirname}`);
 
 const createMyServer = createServerHttp((_, res) => {
-    res.end('Request accepted');
+  res.end('Request accepted');
 });
 
 module.exports = {
-    unknownObject,
-    createMyServer,
+  unknownObject,
+  createMyServer,
 };
-
